@@ -110,10 +110,119 @@
 		outline: none;
 	}
 
+	li:hover{
+		color: black ;
+	}
+
+/* ---- Timeline ---- */
+
+ol {
+	position: relative;
+	display: block;
+	margin: 100px;
+	height: 4px;
+	background: #9b2;
+}
+ol::before,
+ol::after {
+	content: "";
+	position: absolute;
+	top: -8px;
+	display: block;
+	width: 0;
+	height: 0;
+  border-radius: 10px;
+	border: 10px solid #9b2;
+}
+ol::before {
+	left: -5px;
+}
+ol::after {
+	right: -10px;
+	border: 10px solid transparent;
+	border-right: 0;
+	border-left: 20px solid #9b2;
+  border-radius: 3px;
+}
+
+/* ---- Timeline elements ---- */
+
+li.t {
+	position: relative;
+	top: -77px;
+	display: inline-block;
+	float: left;
+	width: 150px;
+	transform: rotate(-45deg);
+	font: bold 14px arial;
+}
+li.t::before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: -29px;
+	display: block;
+	width: 6px;
+	height: 6px;
+	border: 4px solid #9b2;
+	border-radius: 10px;
+	background: #eee;
+}
+
+/* ---- Details ---- */
+
+.details {
+	display: none;
+
+	position: absolute;
+	left: -85px;
+	top: 60px;
+	padding: 15px;
+	border-radius: 3px;
+	border-right: 2px solid rgba(0,0,0,.1);
+	border-bottom: 2px solid rgba(0,0,0,.1);
+	transform: rotate(45deg);
+	font: 12px arial;
+	background: #fff;
+}
+.details::before {
+	content: "";
+	position: absolute;
+	left: 10px;
+	top: -9px;
+	display: block;
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom-color: #fff;
+	border-top: 0;
+}
+
+/* ---- Hover effects ---- */
+
+li.t:hover {
+	cursor: pointer;
+  color: #28e;
+}
+li.t:hover::before {
+	top: 1px;
+	left: -31px;
+	width: 8px;
+	height: 8px;
+	border-width: 5px;
+	border-color: #28e;
+}
+li.t:hover .details {
+	display: block;
+  color: #444;
+}
+
+
 	.fa-heart{
 		color:red;
 		font-size: 20px;
 	}
+
 	</style>
 	<!-- End demo purposes only -->
 
@@ -162,7 +271,16 @@
 					</div><br>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2">
+
+
+							<h1 class="to-animate">OPEN CODE</h1>
+							<h2 class="to-animate"><i>An Event for Open Source Developers</i> </a></h2>
+
+							<h1 class="to-animate">Do something you love.</h1>
+							<h2 class="to-animate">Another free HTML5 bootstrap template by <a href="http://freehtml5.co/" target="_blank" title="Free HTML5 Bootstrap Templates">FREEHTML5.co</a> released under <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons 3.0</a></h2>
+
 							<h2 class="to-animate">OpenCode'18</h2>
+
 						</div>
 					</div>
 				</div>
@@ -212,15 +330,55 @@
 			</div>
 		</div>
 	</section>
-
+	<div class="timeline">
+	<div align="center"> <h1><i>Timeline</i></h1>  </div>
+		<ol>
+  <li class="t">
+    01 Jan 2018
+    <span class="details">
+      Project submissions start
+    </span>
+  </li>
+  <li class="t">
+    10 Jan 2018
+    <span class="details">
+     Event Starts
+    </span>
+  </li >
+  <li class="t">
+    10 Feb 2018
+    <span class="details">
+      Event Ends
+    </span>
+  </li >
+  <li class="t">
+    Point 2
+    <span class="details">
+      Description of point 2
+    </span>
+  </li >
+  <li class="t">
+    Point 2
+    <span class="details">
+      Description of point 2
+    </span>
+  </li >
+  <li class="t">
+    Point 3
+    <span class="details">
+      Description of point 3
+    </span>
+  </li>
+</ol>
+	</div>
 	<section id="fh5co-work" data-section="work">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate">Work</h2>
+					<h2 class="to-animate">Diversity</h2>
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 subtext to-animate">
-							<h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+							<h3>Here are the sample projects that u can see to get an idea.</h3>
 						</div>
 					</div>
 				</div>
@@ -376,6 +534,15 @@
 			<div class="row">
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-anchor"></i>
+
+					<h3>Useful Projects</h3>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-layers2"></i>
+					<h3>Open Source Contribution</h3>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+
 					<h3>Brand &amp; Strategy</h3>
 					<!-- <p>ar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p> -->
 					<p>Increase awareness about the world of open source.</p>
@@ -385,12 +552,22 @@
 					<h3>Web &amp; Interface</h3>
 					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p> -->
 					<p>Get people started with Git and GitHub.</p>
+
 				</div>
 
 				<div class="clearfix visible-sm-block"></div>
 
 				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
 					<i class="icon to-animate-2 icon-video2"></i>
+
+					<h3>Learn to Code</h3>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+				</div>
+				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
+					<i class="icon to-animate-2 icon-monitor"></i>
+					<h3>Useful Developements</h3>
+					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p>
+
 					<h3>Photo &amp; Video</h3>
 					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p> -->
 					<p>Empower beginners to get started with development.</p>
@@ -400,6 +577,7 @@
 					<h3>CMS &amp; eCommerce</h3>
 					<!-- <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean</p> -->
 					<p>Help mentors to improve their guiding skills.</p>
+
 				</div>
 
 			</div>
@@ -558,9 +736,15 @@
 
 	</section>
 
+	
+	
+	<footer id="footer" role="contentinfo" style="background-color: rgba(0,0,255,0.7);">
+		<div align="right"><a href="#" class="gotop js-gotop" "><i class="icon-arrow-up2"></i></a></div>
+
 
 	<footer id="footer" role="contentinfo">
 		<a href="#" class="gotop js-gotop"><i class="icon-arrow-up2"></i></a>
+
 		<div class="container">
 			<div class="">
 				<div class="col-md-12 text-center">
